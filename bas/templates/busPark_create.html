@@ -1,0 +1,20 @@
+{%extends 'base.html' %}
+{% load widget_tweaks %}
+{%block content %}
+<h1>Создать новую запись</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="form-error">{{ form.non_field_errors }}</div>
+
+    {% for field in form %}
+        <fieldset class="form-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+              {% render_field field|add_class:"form-group"%}
+            <div class="form-error">{{ field.errors }}</div>
+        </fieldset>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{%extends 'base.html' %}
+{% block title %} Книги {%endblock %}
+{%block content %}
+
+<h1> Автопарки: </h1>
+    <div class='row'>
+            {% for park in busPark %}
+            <div class="col-md-4 mt-4">
+                <div class='card h-100'>
+
+                        <div class='card-body'>
+                            <h5 class="card-title"> {{park.title}}</h5>
+                            <p class="card-text"> {{ park.address}}</p>
+                            <a href="{% url 'park_detail' park.pk %}" class="btn btn-primary">Детали</a>
+
+                        </div>
+                </div>
+            </div>
+        {%endfor%}
+        <a href="{% url 'park_create' %}" class="btn btn-primary">Создать</a>
+    </div>
+
+
+{% endblock %}
