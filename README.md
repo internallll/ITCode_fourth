@@ -10,3 +10,9 @@
 ![image](https://github.com/user-attachments/assets/64dba584-87a4-4655-9c04-ab947a9a038f)
 ![image](https://github.com/user-attachments/assets/e7b49895-fb12-4d04-bd6b-ce97bc3d07d9)
 ![image](https://github.com/user-attachments/assets/f6588eda-44ce-42a3-a94d-25a103ba78be)
+Upload screenshots for task with filters
+![image](https://github.com/user-attachments/assets/5ef2b910-4033-4a8b-b769-153bc961c10c)
+![image](https://github.com/user-attachments/assets/ceb89e05-7306-4f2d-b111-c00512c9f5a2)
+![image](https://github.com/user-attachments/assets/ede072e3-88ff-4dfe-a4ec-c4216b50f095)
+![image](https://github.com/user-attachments/assets/c547a048-db27-49e3-8a4e-150574b8406b)
+![image](https://github.com/user-attachments/assets/ced620d5-95fc-463f-99c8-a3d65d4f77b9)
