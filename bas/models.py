@@ -5,8 +5,10 @@ from django.utils.module_loading import module_has_submodule
 class BusPark(models.Model):
   title = models.CharField(verbose_name='Название', max_length=255)
   address = models.CharField(verbose_name='Адрес', max_length=255)
+  description = models.TextField(verbose_name='Описание', blank=True)
   phone_number = models.CharField(verbose_name='Номер телефона', max_length=11)
-  logo = models.ImageField(upload_to='media', null = True)
+  logo = models.ImageField(upload_to='media', null = True, blank = True)
+  year_found = models.IntegerField(verbose_name='Год основания', null=True)
 
   class Meta:
     verbose_name='Автопарк'

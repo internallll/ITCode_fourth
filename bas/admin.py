@@ -5,7 +5,7 @@ from . import models
 
 @admin.register(models.BusPark)
 class BusParkAdmin(admin.ModelAdmin):
-    list_display = ('title', 'address', 'phone_number')
+    list_display = ('title', 'address', 'phone_number', 'year_found')
 
 @admin.register(models.Bus)
 class BusAdmin(admin.ModelAdmin):

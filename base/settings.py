@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'bas',
     'bootstrap5',
-    'widget_tweaks'
+    'widget_tweaks',
+    'django_filters'
 ]
 
 

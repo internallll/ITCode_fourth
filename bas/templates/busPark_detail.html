@@ -11,6 +11,8 @@
       <h5>Адрес: {{busPark.address}}</h5>
       <br>
       <h5>Номер телефона: {{busPark.phone_number}}</h5>
+      <h5>Год основания: {{busPark.year_found}}</h5>
+      <h5>Описание: {{busPark.description}}</h5>
 
       <a href="{%url 'park_list' %}" class="btn btn-secondary">Назад к списку</a>
       <a href="{%url 'park_update' busPark.pk%}" class="btn btn-warning">Редактировать</a>

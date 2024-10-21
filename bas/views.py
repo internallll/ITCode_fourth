@@ -1,3 +1,4 @@
+from logging import Filter
 
 from django import forms
 from django.views.generic import ListView, DeleteView, CreateView
@@ -5,19 +6,21 @@ from django.views.generic import ListView, DeleteView, CreateView
 from django.urls import reverse_lazy
 
 from django.views.generic import TemplateView, DetailView, UpdateView
+from django_filters.views import FilterView
 
+
+from bas import filters
 from bas.models import *
 
 # Create your views here.
 
-class BusParkList(ListView):
+class BusParkList(FilterView):
     model = BusPark
     template_name = 'busPark_list.html'
+    context_object_name = 'busPark'
+    filterset_class = filters.BusParkFilter
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['busPark'] = BusPark.objects.all()
-        return context
+
 
 class BusParkDetail(DetailView):
     model = BusPark
@@ -28,7 +31,7 @@ class BusParkDetail(DetailView):
 class BusParkUpdate(UpdateView):
     model = BusPark
     template_name= 'busPark_form.html'
-    fields = ['title', 'address', 'phone_number']
+    fields = ['title', 'address', 'phone_number', 'year_found', 'description']
 
     def get_success_url(self):
         return reverse_lazy('park_detail', kwargs={'pk': self.object.pk})

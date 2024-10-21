@@ -1,7 +1,23 @@
 {%extends 'base.html' %}
-{% block title %} Книги {%endblock %}
-{%block content %}
+{% load bootstrap5 %}
+{% block title %} Автопарки {%endblock %}
 
+{% block sidebar %}
+<div class="col-md-3">
+    <div class="card-body">
+        <form method="get">
+            {% csrf_token %}
+            {{ filter.form.as_p }}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Поиск</button>
+            {% endbuttons %}
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
+{%block content %}
 <h1> Автопарки: </h1>
     <div class='row'>
             {% for park in busPark %}
@@ -11,6 +27,7 @@
                         <div class='card-body'>
                             <h5 class="card-title"> {{park.title}}</h5>
                             <p class="card-text"> {{ park.address}}</p>
+                            <p class="card-text">Год основания: {{park.year_found}}</p>
                             <a href="{% url 'park_detail' park.pk %}" class="btn btn-primary">Детали</a>
 
                         </div>
