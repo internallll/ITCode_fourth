@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b25c66a6-7f87-4ec1-876f-7ec6b2af5226" name="Changes" comment="Add View Templates">
-      <change afterPath="$PROJECT_DIR$/bas/filters.py" afterDir="false" />
+    <list default="true" id="b25c66a6-7f87-4ec1-876f-7ec6b2af5226" name="Changes" comment="Add tests">
+      <change afterPath="$PROJECT_DIR$/bas/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/bas/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bas/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bas/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bas/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bas/templates/busPark_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bas/templates/busPark_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bas/templates/busPark_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/bas/templates/busPark_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bas/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +56,8 @@
     "Python.views.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Admin/PycharmProjects/ITCode_fourth/bas/templates"
+    "last_opened_file_path": "C:/Users/Admin/PycharmProjects/ITCode_fourth/bas/templates",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -96,11 +93,40 @@
       <option name="project" value="LOCAL" />
       <updated>1729188701856</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add filters and many new attributes for BusPark">
+      <option name="closed" value="true" />
+      <created>1729527979416</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729527979416</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add tests">
+      <option name="closed" value="true" />
+      <created>1729793130616</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729793130616</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add View Templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add View Templates" />
+    <MESSAGE value="Add filters and many new attributes for BusPark" />
+    <MESSAGE value="Add tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tests" />
   </component>
 </project>

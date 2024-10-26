@@ -1,18 +1,24 @@
 from logging import Filter
-
 from django import forms
 from django.views.generic import ListView, DeleteView, CreateView
-
 from django.urls import reverse_lazy
-
 from django.views.generic import TemplateView, DetailView, UpdateView
 from django_filters.views import FilterView
+from rest_framework import viewsets
 
 
 from bas import filters
 from bas.models import *
+from bas import serializers
 
-# Create your views here.
+class BusParkAPI(viewsets.ModelViewSet):
+    queryset = BusPark.objects.all()
+    serializer_class = serializers.BusPark
+
+
+class BusAPI(viewsets.ModelViewSet):
+    queryset = Bus.objects.all()
+    serializer_class = serializers.Bus
 
 class BusParkList(FilterView):
     model = BusPark

@@ -18,11 +18,22 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
+from drf_spectacular.views import  SpectacularAPIView, SpectacularSwaggerView
+from rest_framework.routers import DefaultRouter
 
 from bas import views
 
+
+router = DefaultRouter()
+
+router.register('busParks', views.BusParkAPI, basename='busParks')
+router.register('buses', views.BusAPI, basename='buses')
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('swagger/', SpectacularSwaggerView.as_view(url_name='schema')),
     path('busPark_list/', views.BusParkList.as_view(), name='park_list'),
     path('busPark/<int:pk>/', views.BusParkDetail.as_view(), name='park_detail'),
     path('busPark/<int:pk>/update/', views.BusParkUpdate.as_view(), name='park_update'),
@@ -32,4 +43,4 @@ urlpatterns = [
 
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + router.urls
